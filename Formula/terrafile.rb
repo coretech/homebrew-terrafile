@@ -4,7 +4,7 @@ class Terrafile < Formula
   homepage "https://github.com/coretech/terrafile"
   url "https://github.com/coretech/terrafile/releases/download/v0.5/terrafile_0.5_Darwin_x86_64.tar.gz"
   version "0.5"
-  sha256 "dc9bd32eb7d65812011642bfd26432643672abd541cce8accf34ddafeaf72855"
+  sha256 "dcf85ca5be36b9ed9503ecc59d73c260fcc6c5b3eb29b3e501ab46e9e3389ed3"
 
   def install
     bin.install "terrafile"
