@@ -2,9 +2,18 @@
 class Terrafile < Formula
   desc "Systematically manage external modules from Github for use in Terraform."
   homepage "https://github.com/coretech/terrafile"
-  url "https://github.com/coretech/terrafile/releases/download/v0.5/terrafile_0.5_Darwin_x86_64.tar.gz"
-  version "0.5"
-  sha256 "dcf85ca5be36b9ed9503ecc59d73c260fcc6c5b3eb29b3e501ab46e9e3389ed3"
+  version "0.6"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/coretech/terrafile/releases/download/v0.6/terrafile_0.6_Darwin_x86_64.tar.gz"
+    sha256 "290cd755821a3cc9dc8901abfb5c3bcb9aedc344f7de6bf9512064de96308f06"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/coretech/terrafile/releases/download/v0.6/terrafile_0.6_Linux_x86_64.tar.gz"
+      sha256 "770993ee36c77a464f31ab0980cd852199013c3486dde92fa34e8e7ee6a77555"
+    end
+  end
 
   def install
     bin.install "terrafile"
