@@ -3,7 +3,6 @@ class Terrafile < Formula
   desc "Systematically manage external modules from Github for use in Terraform."
   homepage "https://github.com/coretech/terrafile"
   version "0.6"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/coretech/terrafile/releases/download/v0.6/terrafile_0.6_Darwin_x86_64.tar.gz"
