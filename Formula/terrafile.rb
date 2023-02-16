@@ -5,20 +5,20 @@
 class Terrafile < Formula
   desc "Systematically manage external modules from Github for use in Terraform."
   homepage "https://github.com/coretech/terrafile"
-  version "0.7"
+  version "0.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/coretech/terrafile/releases/download/v0.7/terrafile_0.7_Darwin_arm64.tar.gz"
-      sha256 "b1c0fdcc2215b786cf4f77beaf7e9a5b93f6aff6d75b34e0ede234b5581cfd59"
+      url "https://github.com/coretech/terrafile/releases/download/v0.8/terrafile_0.8_Darwin_arm64.tar.gz"
+      sha256 "c060e5404199e0eac476dba0c14149ec1a3b770b2c8dc10dee95353b33ee81af"
 
       def install
         bin.install "terrafile"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/coretech/terrafile/releases/download/v0.7/terrafile_0.7_Darwin_x86_64.tar.gz"
-      sha256 "370faa1e2ccce22f4ab9f1ff1a6790a43cedb3291943208a58e3092593cbaf8e"
+      url "https://github.com/coretech/terrafile/releases/download/v0.8/terrafile_0.8_Darwin_x86_64.tar.gz"
+      sha256 "3d230b2ae692b83c70973c43c8860a053ca1da2bd99bf52fbf5861699129e2dd"
 
       def install
         bin.install "terrafile"
@@ -28,16 +28,16 @@ class Terrafile < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coretech/terrafile/releases/download/v0.7/terrafile_0.7_Linux_arm64.tar.gz"
-      sha256 "eb293b5735760e29002831348265d0c91a63ce019eb40b2039a9d8ab538af1ac"
+      url "https://github.com/coretech/terrafile/releases/download/v0.8/terrafile_0.8_Linux_arm64.tar.gz"
+      sha256 "3fed784f7a2622d0327ae3a8d0b025551a31e932f46d6b3803458b53390a9325"
 
       def install
         bin.install "terrafile"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/coretech/terrafile/releases/download/v0.7/terrafile_0.7_Linux_x86_64.tar.gz"
-      sha256 "85be37110649408fa9fcc58669e4944c7a0fae1a40c070bc50cbe20efac52e16"
+      url "https://github.com/coretech/terrafile/releases/download/v0.8/terrafile_0.8_Linux_x86_64.tar.gz"
+      sha256 "8db7df5c820bc025affb379d286aa8bf3b335bc49670ae14e53911037d5503b8"
 
       def install
         bin.install "terrafile"
